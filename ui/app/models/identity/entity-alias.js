@@ -3,6 +3,7 @@ import DS from 'ember-data';
 const { attr, belongsTo } = DS;
 
 export default IdentityModel.extend({
+  parentType: 'entity',
   formFields: ['name', 'mountAccessor', 'metadata'],
   entity: belongsTo('identity/entity', { readOnly: true, async: false }),
 
